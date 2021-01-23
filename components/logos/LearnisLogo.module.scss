@@ -1,0 +1,35 @@
+.learnis_logo{
+  display: flex;
+  align-items: center;
+  margin-left: 48px;
+  
+  .learnis_logo_img img{
+    width: 64px;
+    height: 64px;
+  }
+
+  .learnis_logo_text{
+    color: #026666;
+    margin-left: 13px;
+    font-family: Lora;
+    font-size: 24px;
+  }
+
+
+  @media(max-width: 600px){
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: center;
+    
+    .learnis_logo_img img{
+      width: 48px;
+      height: 48px;
+    }
+
+    .learnis_logo_text{
+      margin-left: 0px;
+      font-family: Lora;
+      font-size: 18px;
+    }
+  }
+}

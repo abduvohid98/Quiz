@@ -1,0 +1,62 @@
+@import 'mixins.scss';
+.table{
+    display: flex;
+    flex-direction: column;  
+    height: 100%;  
+    border-radius: 15px ;
+    overflow: hidden;
+    .table_col{
+        display: flex;   
+        border-bottom: 3px solid #BDBDBD;  
+        background: white;  
+        align-items: center;
+        height: 86px;
+
+        .table_col_theme{
+            display: -webkit-box;
+            min-height: 14px;
+            overflow: hidden;
+            text-align: center;
+            vertical-align: middle;
+            word-break: break-all;         
+           -webkit-box-orient: vertical;
+           -webkit-line-clamp: 2;
+            width: 590px;
+            cursor: default;   
+            padding: 0 32px 0 32px; 
+            @include themes_font;
+            @media(max-width: 600px){padding: 0 12px 0 12px;}                   
+        }
+
+        .table_col_glasses{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 153px;
+            height: 100%;
+            color:#FF8800;  
+            border-left: 3px solid hsl(0, 0%, 74%);
+            cursor: pointer;
+            user-select: none; 
+            flex-grow: 1;  
+            @include mark_font;     
+        }
+
+        .table_col_glasses:hover{
+            background: #3AB8BC;
+            color: white;
+        }
+
+        .table_col_glasses:active{
+            background: #006666;
+        }
+    } 
+    
+    .table_col:hover{
+        background:#E6F0F0; 
+    }
+
+    .table_col:last-child{
+        border-bottom: 0px;
+    }
+}

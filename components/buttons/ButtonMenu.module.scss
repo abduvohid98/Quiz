@@ -1,0 +1,13 @@
+.menu_button{
+    display: flex;     
+    margin-right: 48px;  
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;  
+    user-select: none;
+    font-size: 9px;
+    text-transform: uppercase;
+    cursor: pointer;  
+    
+    @media(max-width: 600px){margin-right: 10px;}
+}

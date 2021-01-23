@@ -1,0 +1,18 @@
+.container{
+    position: absolute;
+    transition: height 0.03s ease;
+    width:100%;
+    background:url('/images/rightDecorative.jpg') right bottom  no-repeat white;
+    background-position: absolute;
+   .inside_container{
+       display: flex;
+       width: 100%;
+       padding: 48px;
+       padding-top: 180px;
+       box-sizing: border-box;
+       @media(max-width:1024px){ flex-direction: column;}
+       @media(max-width:600px){ flex-direction: column; padding: 10px; padding-top: 118px;}
+   }
+}
+
+

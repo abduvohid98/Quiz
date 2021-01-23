@@ -1,6 +1,7 @@
 {
-  "name": "my",
+  "name": "yourquiz",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,8 +9,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "mongodb": "^3.6.3",
     "next": "10.0.5",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "sass": "^1.32.5",
+    "socket.io": "^3.1.0",
+    "socket.io-client": "^3.1.0"
   }
 }

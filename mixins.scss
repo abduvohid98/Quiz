@@ -1,0 +1,177 @@
+/*Grid*/
+$xl: '1200px'; $xlc: 1152px;
+$lg: '992px'; $lgc: 864px;
+$md: '768px'; $mdc: 720px;
+$sm: '576px'; $smc: 528px;
+$xs: '0px'; $xsc: 100%;
+/*Colors*/
+//Basic
+$ld_color_black: #333333;
+$ld_color_darkGreen: #006666;
+$ld_color_turquoise: #3ab8bc;
+$ld_color_brightTurquoise: #00ead9;
+$ld_color_yellow: #ffd003;
+$ld_color_white: #ffffff;
+//Gradients
+$ld_color_g1: linear-gradient(225deg, #FFD003 0%, #3AB8BC 51.04%, #026666 100%);
+$ld_color_hoverG1: linear-gradient(225deg, #026666 0%, #3AB8BC 51.04%, #FFD003 100%);
+$ld_color_g2: linear-gradient(90deg, #F49C19 0%, #FFD003 100%);
+$ld_color_hoverG2: linear-gradient(90deg, #FFD003 0%, #F49C19 100%);
+//Gray
+$ld_color_gray1: #4f4f4f;
+$ld_color_gray2: #828282;
+$ld_color_gray3: #bdbdbd;
+$ld_color_gray4: #e0e0e0;
+$ld_color_gray5: #f2f2f2;
+$ld_color_gray6: #f8f8f8;
+//Check
+$ld_color_checkFail: #d22d25;
+$ld_color_checkSuccess: #10a376;
+//Hover
+$ld_color_hover1: #e6f0f0;
+$ld_color_hover2: linear-gradient(225deg, #026666 0%, #3AB8BC 51.04%, #FFD003 100%);
+$ld_color_hover3: linear-gradient(90deg, #FFD003 0%, #F49C19 100%);
+
+
+$ld_color_link: #007AEB;
+/*Fonts*/
+@mixin ld_font_text() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  @media (min-width: $xs) {font-size: 14px; line-height: 20px; }
+  @media (min-width: $md) {font-size: 16px; line-height: 20px; }
+  @media (min-width: $lg) {font-size: 16px; line-height: 20px; }
+  @media (min-width: $xl) {font-size: 18px; line-height: 24px; }
+}
+@mixin ld_font_h1() {
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  @media (min-width: $xs) {font-size: 32px; line-height: 40px; }
+  @media (min-width: $md) {font-size: 40px; line-height: 48px; }
+  @media (min-width: $lg) {font-size: 44px; line-height: 56px; }
+  @media (min-width: $xl) {font-size: 48px; line-height: 64px; }
+}
+@mixin ld_font_h2() {
+  font-family: 'Lora', serif;
+  font-weight: bold;
+  @media (min-width: $xs) {font-size: 26px; line-height: 32px; }
+  @media (min-width: $md) {font-size: 28px; line-height: 36px; }
+  @media (min-width: $lg) {font-size: 32px; line-height: 40px; }
+  @media (min-width: $xl) {font-size: 36px; line-height: 48px; }
+}
+@mixin ld_font_h3() {
+  font-family: 'Lora', sans-serif;
+  font-weight: bold;
+  @media (min-width: $xs) {font-size: 20px; line-height: 28px; }
+  @media (min-width: $md) {font-size: 20px; line-height: 28px; }
+  @media (min-width: $lg) {font-size: 22px; line-height: 32px; }
+  @media (min-width: $xl) {font-size: 24px; line-height: 32px; }
+}
+@mixin ld_font_h4() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  @media (min-width: $xs) {font-size: 20px; line-height: 28px; }
+  @media (min-width: $md) {font-size: 20px; line-height: 28px; }
+  @media (min-width: $lg) {font-size: 22px; line-height: 32px; }
+  @media (min-width: $xl) {font-size: 24px; line-height: 32px; }
+}
+@mixin ld_font_h5() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  @media (min-width: $xs) {font-size: 14px; line-height: 20px; letter-spacing: 0.2em; text-transform: uppercase;}
+  @media (min-width: $md) {font-size: 16px; line-height: 20px; letter-spacing: 0.3em; text-transform: uppercase;}
+  @media (min-width: $lg) {font-size: 16px; line-height: 20px; letter-spacing: 0.3em; text-transform: uppercase;}
+  @media (min-width: $xl) {font-size: 18px; line-height: 24px; letter-spacing: 0.36em; text-transform: uppercase;}
+}
+@mixin ld_font_medium() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  @media (min-width: $xs) {font-size: 14px; line-height: 20px;}
+  @media (min-width: $md) {font-size: 16px; line-height: 20px;}
+  @media (min-width: $lg) {font-size: 16px; line-height: 20px;}
+  @media (min-width: $xl) {font-size: 18px; line-height: 24px;}
+}
+@mixin ld_font_menu() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  @media (min-width: $xs) {font-size: 12px; line-height: 16px; }
+  @media (min-width: $md) {font-size: 14px; line-height: 18px; }
+  @media (min-width: $lg) {font-size: 14px; line-height: 18px; }
+  @media (min-width: $xl) {font-size: 14px; line-height: 18px; }
+}
+@mixin ld_font_small() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  @media (min-width: $xs) {font-size: 12px; line-height: 16px; }
+  @media (min-width: $md) {font-size: 14px; line-height: 18px; }
+  @media (min-width: $lg) {font-size: 14px; line-height: 18px; }
+  @media (min-width: $xl) {font-size: 14px; line-height: 18px; }
+}
+
+@mixin ld_font_subtitle_inner() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; text-transform: uppercase;
+  @media (min-width: $xs) {font-size: 16px; line-height: 20px; }
+  @media (min-width: $md) {font-size: 16px; line-height: 20px; }
+  @media (min-width: $lg) {font-size: 16px; line-height: 20px; }
+  @media (min-width: $xl) {font-size: 20px; line-height: 24px; }
+}
+
+/*Shadows*/
+@mixin ld_shadow_noHover() {  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);  border-radius: 3px; }
+@mixin ld_shadow_hover() {  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.06);  border-radius: 3px; }
+@mixin ld_shadow_pressed() {  box-shadow: 0px 0px 2px #BDBDBD;  border-radius: 3px; }
+@mixin ld_shadow_big() {  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.1);  border-radius: 3px; }
+@mixin ld_shadow_simple() {  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.07);  border-radius: 3px; }
+
+@mixin ld_shadow_strong() {  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);  border-radius: 3px; }
+
+
+/*New mixins*/
+
+
+
+
+@mixin ld_font_h55() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: $ld_color_gray2;
+  @media (min-width: $xs) {font-size: 14px; line-height: 16px; text-transform: uppercase;}
+  @media (min-width: $sm) {font-size: 16px; line-height: 16px; text-transform: uppercase;}
+  @media (min-width: $md) {font-size: 18px; line-height: 18px; text-transform: uppercase;}
+  @media (min-width: $lg) {font-size: 20px; line-height: 20px; text-transform: uppercase;}
+  @media (min-width: $xl) {font-size: 20px; line-height: 20px; text-transform: uppercase;}
+}
+
+
+@mixin ld_font_h555() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  @media (min-width: $xs) {font-size: 14px; line-height: 16px; }
+  @media (min-width: $sm) {font-size: 16px; line-height: 18px; }
+  @media (min-width: $md) {font-size: 20px; line-height: 22px; }
+  @media (min-width: $lg) {font-size: 22px; line-height: 24px; }
+  @media (min-width: $xl) {font-size: 24px; line-height: 32px; }
+}
+
+
+@mixin mark_font() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  @media (min-width: $xs) {font-size: 14px; line-height: 16px; }
+  @media (min-width: $sm) {font-size: 16px; line-height: 18px; }
+  @media (min-width: $md) {font-size: 20px; line-height: 22px; }
+  @media (min-width: $lg) {font-size: 24px; line-height: 26px; }
+  @media (min-width: $xl) {font-size: 36px; line-height: 38px; }
+}
+
+@mixin themes_font(){
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  @media (min-width: $xs) {font-size: 14px; line-height: 16px; }
+  @media (min-width: $sm) {font-size: 16px; line-height: 18px; }
+  @media (min-width: $md) {font-size: 20px; line-height: 22px; }
+  @media (min-width: $lg) {font-size: 24px; line-height: 26px; }
+  @media (min-width: $xl) {font-size: 28px; line-height: 30px; }
+}

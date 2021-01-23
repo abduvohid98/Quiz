@@ -1,0 +1,95 @@
+@import "mixins.scss";
+    
+.table{
+    display: flex;      
+    flex-direction: column;  
+    overflow: hidden;
+    border-radius: 15px; 
+    font-size: 24px;
+    counter-reset: count;
+    @media(min-width:768px) { width: 811px; }
+    .table_name{
+        display: flex;
+        align-items: center;
+        width:100%;
+        height: 56px;
+        font-weight: bold;         
+        padding: 24px;  
+        background:#FCFBFB;
+
+        @media (min-width: $xs) {font-size: 20px; line-height: 22px; }
+        @media (min-width: $sm) {font-size: 24px; line-height: 26px; }
+        @media (min-width: $md) {font-size: 26px; line-height: 28px; }
+        @media (min-width: $lg) {font-size: 32px; line-height: 36px; }
+        @media (min-width: $xl) {font-size: 36px; line-height: 48px; }
+    }
+
+    .table_header{
+        display: flex;   
+        background:#FCFBFB; 
+        padding: 0 24px 0 24px;
+        @include ld_font_h55;
+        height: 56px;
+        align-items: center;
+        .table_header_player { 
+            width: 440px; 
+            @media(max-width: 375px){width: 250px;}
+        }
+        .table_header_glasses { width: 120px; }
+        .table_header_management { width: 203px; text-align: center; }
+        @media(max-width: 320px){font-size: 12px;  word-break:none;}
+    }
+
+    .table_row{
+        display: flex;   
+        border-bottom: 2px solid $ld_color_gray5;  
+        background:#FCFBFB; 
+        align-items: center;
+        padding: 0 24px 0 24px;
+        height: 56px;
+        @include ld_font_h555;
+        @media(max-width: 320px){font-size: 12px;  word-break:none;}
+        .table_row_data1{
+            width: 440px;
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media(max-width: 375px){width: 250px;}
+        }
+
+        .table_row_data1::before{
+            color:$ld_color_gray2;
+            counter-increment: count;
+            content: counter(count)'. ';
+        }
+        .table_row_data2{
+            color: #FF8800;
+            font-weight: bold;
+            width: 120px;
+        }
+        .table_row_data3{
+            display: flex;
+            justify-content: center;
+            width: 203px;
+
+            .delete_button{
+                background-repeat: no-repeat ;
+                transition: 0.3s;
+                cursor: pointer;   
+                @media (min-width: $xs) {background: url('/images/cancel/cancel16.svg'); width: 16px; height: 16px; }
+                @media (min-width: $md) {background: url('/images/cancel/cancel20.svg'); width: 20px; height: 20px; }
+                @media (min-width: $lg) {background: url('/images/cancel/cancel22.svg'); width: 22px; height: 22px; }
+                @media (min-width: $xl) {background: url('/images/cancel/cancel24.png'); width: 24px; height: 24px; }
+            }
+            .delete_button:hover{
+                transform:scale(1.4);
+            }
+        }
+    }
+
+    .table_row:last-child{
+        border-bottom: 0px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}

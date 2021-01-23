@@ -1,0 +1,50 @@
+@import 'mixins.scss';
+.ld_gamecode{
+    display: flex;
+    flex-direction: column;
+    width: 528px;
+    border-radius: 15px;
+    padding: 24px;    
+    cursor: default;
+    background: white;
+    border: 2px solid #F2F2F2;
+    box-sizing: border-box;
+   
+    @media(max-width:600px){ width: 100%; }
+    @media(max-width:1024px){ margin-bottom: 32px; }
+    @media(min-width:1024px){ margin-right: 20px;}
+    @media(min-width:1280px){ margin-right: 96px;}
+        
+    
+    .ld_gamecode_head{
+        font-size: 24px;
+        font-weight: bold;  
+        align-items: center;  
+        min-height: 32px;
+        @media(max-width: 600px){font-size: 18px;}
+    }
+
+    .ld_gamecode_code{
+        display: flex;;
+        height: 48px;
+        margin-top: 32px;
+        font-family: Lora;
+        font-size: 36px;
+        align-items: center;
+        color: #ff8800;
+        font-weight: bold; 
+        @media(max-width: 600px){ font-size: 28px; margin-top: 16px; height: 36px;}
+    }
+
+    .ld_gamecode_text{
+        display: flex;
+        min-height: 48px;
+        width: 480px;
+        margin-top: 32px;
+        font-size: 18px;
+        font-weight: roboto;
+        @media(max-width:600px){ width: 100%; font-size: 14px; margin-top: 16px;}
+    }    
+}
+
+

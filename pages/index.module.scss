@@ -1,0 +1,16 @@
+
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    top:0px;
+    position: absolute;
+    background: linear-gradient(0deg, #F7B200, #F7B200), #F6921E;
+    flex-direction: column;
+    .container_content{
+      display: flex;
+      padding:48px;
+      @media(max-width: 600px){padding:10px; padding-top: 18px;}
+    }
+  }
+  
