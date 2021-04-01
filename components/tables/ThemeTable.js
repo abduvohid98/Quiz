@@ -20,10 +20,10 @@ return (
           <div className = {styles.table_col} id={data.id}>
             <div className = {styles.table_col_theme}  key={index}>{data.title}</div>
             {
-              data.tasks.map((task) => {
+              data.tasks.map((task, index) => {
                 count = count + 100;
                 return(
-                  <div className = {styles.table_col_glasses} onClick={props.onClick} id={task.id}>{count}</div>
+                  <div key={index} className = {styles.table_col_glasses} onClick={props.onClick} id={task.id}>{count}</div>
                 )
               })
             }         

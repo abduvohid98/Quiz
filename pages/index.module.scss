@@ -12,5 +12,50 @@
       padding:48px;
       @media(max-width: 600px){padding:10px; padding-top: 18px;}
     }
+
+    .con{
+    display:flex;
+    flex-grow:1;
+    background:red;
+    width:500px;
+    height:500px;
+    transform-style: preserve-3d;
+    animation: main-rotate 0.3s ;
+    }
+    @keyframes main-rotate {
+        100% {
+            transform: rotateX(180deg);
+        }
+    }
+    
+    .con1{
+      padding:50px;
+    }
+    .cong{
+      display:flex;
+      flex-grow:1;
+      width:500px;
+      height:500px;
+      left:25px;
+      position:absolute;
+      border: 2px dotted black; 
+    }
+    
+    .conb{
+      display:flex;
+      flex-grow:1;
+      width:100%;
+      height:500px;
+      left:100px;
+      position:absolute;
+      border: 2px dotted black; 
+    }
+
+    .con222{
+      background:black;
+      width:500px;
+      height:500px;
+    }
+    
   }
   

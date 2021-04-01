@@ -1,0 +1,108 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   
+    .container__content{
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+        align-items: center;
+
+        .content__text{
+            font-size: 20px;
+            font-family: roboto;
+            font-weight: 700;
+            line-height: 24px;
+            text-transform: uppercase;
+            margin-top: 48px;
+        }        
+        
+        .content__myscore{
+            display: flex;
+            margin-top: 24px;
+            width: 100%;
+            height: 104px;
+            background: linear-gradient(90deg, #F49C19 0%, #FFD003 100%);
+            border-radius: 15px;
+            align-items: center;
+
+            .myscore__leftdecorative{
+               width: 64px;
+               height: 64px;
+               margin-left: 16px;
+            }
+
+            .mycore__textconteiner{
+                display: flex;
+                flex-grow: 1;
+                justify-content: center;
+                flex-direction: column;
+                
+
+                .text{
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                }
+
+                .score{
+                    font-family: Roboto;
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-top: 8px;
+                    font-weight: bold;
+                }
+            }
+
+            .myscore__rightdecorative{
+                width: 64px;
+                height: 64px;
+                margin-right: 16px;
+             }
+        }
+
+        .table__title{
+            color: rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 12px 24px;
+            height: 10;
+            text-transform: uppercase;
+        }
+
+        .table{
+            overflow: scroll;
+          //  height: 460px;;
+            width: 100%;
+            counter-reset: count;
+
+            .table__col{
+                display: flex;
+                height: 32px;
+                margin-top: 12px;
+                border-bottom: 1px solid #E0E0E0;
+                .row__name {
+                    text-align: left;
+                    width: 70%;
+                    text-overflow: ellipsis;
+                }
+                .row__name::before{
+                    counter-increment: count;
+                    content: counter(count) '. ';
+                    color:#828282;
+                }
+                .row__score{
+                    width: 30%;
+                    text-align: left;
+                    color:#FF8800;
+                }
+            }
+
+            .table__col:last-child{
+                border-bottom: 0px;
+            }
+        }
+    }
+}

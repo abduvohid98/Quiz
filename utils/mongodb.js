@@ -3,12 +3,12 @@ export const MongoClient = require('mongodb').MongoClient;
 export const ObjectId = require('mongodb').ObjectID;
 
 export async function connectToDatabase () {
-    const mongoClient  = new MongoClient(, {
+    const mongoClient  = new MongoClient('mongodb://user:12345678901234567890@87.239.108.78/MongoDB-2565', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
     const client = await mongoClient.connect();
-    return {'client': client, 'db': client.db()};
+    return {'client': client, 'db': client.db("MongoDB-2565")};
 }
 
 export async function setActivity(activity) {

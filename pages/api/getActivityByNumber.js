@@ -2,7 +2,6 @@
 
 import {connectToDatabase} from './../../utils/mongodb';
 
-
 export async function getActivityByNumber(activityNumber, userId) {
   const {db, client} = await connectToDatabase();
   try {

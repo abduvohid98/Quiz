@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   
+    .container__content{
+        width: 100%;
+        padding: 36px;
+        text-align: center;
+        align-items: center;
+        
+        .content__clock{
+            margin-top: 148px;
+            width: 48px;
+            height: 48px;
+        }
+        .content__text{
+            font-size: 20px;
+            font-family: roboto;
+            font-weight: 700;
+            line-height: 24px;
+            text-transform: uppercase;
+            margin-top: 16px;
+        }
+
+        .content__text2{
+            font-size: 14px;
+            font-family: roboto;
+            font-weight: 400;
+            line-height: 20px;
+            margin-top: 24px;
+        }
+
+        .content__button{
+            margin-top: 40px;
+            height: 32px;
+            width: 288px;
+            background: linear-gradient(90deg, #F49C19 0%, #FFD003 100%);
+            box-shadow: 0px 0px 20px rgba(246, 146, 30, 0.6);
+            border-radius: 6px;
+            text-transform: uppercase;
+            border: 0px;
+        }
+    }
+}

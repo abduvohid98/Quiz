@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+
+    .container__clock{
+        position: relative;
+        margin-top: 148px;
+        width: 48px;
+        height: 48px;
+        left: 50% !important;
+        transform: translate(-50%, 0) !important;
+    }
+    .container__text{
+        font-size: 20px;
+        font-family: roboto;
+        font-weight: 700;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-top: 16px;
+    }
+
+    .container__text2{
+        font-size: 14px;
+        font-family: roboto;
+        font-weight: 400;
+        line-height: 20px;
+        margin-top: 24px;
+    }
+
+}

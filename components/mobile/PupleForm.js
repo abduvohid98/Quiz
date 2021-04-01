@@ -2,16 +2,15 @@ import React from 'react'
 import Link from 'next/link'
 import styles from './PupleForm.module.scss'
 import {VictoryLogo} from '../logos/VictoryLogo'
-export function PupleForm() {
+export function PupleForm(props) {
     return (
         <div className = {styles.ld_pupleform_container}>
            <Link href = '/'><a ><VictoryLogo text = 'Твоя викторина'/></a></Link> 
-           <form className = {styles.ld_pupleform}>
+           <div className = {styles.ld_pupleform}>
                <label>Ваше имя</label>
-               <input type = 'text' placeholder = 'Впишите сюда'></input>
-               <button >Писоединиться к викторину</button>
-           </form>
-          
+               <input onChange={props.onChange} type = 'text' placeholder = 'Впишите сюда'></input>
+               <button onClick={props.onClick}>Писоединиться к викторину</button>
+           </div>
         </div>
     )
 }
